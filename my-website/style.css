@@ -1,0 +1,240 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  /* outline: solid 1px red; */
+}
+
+/* general styling #############################################################*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fbf8cc;
+  font-family: sans-serif;
+  color: #03045e;
+  line-height: 1.8;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  /* outline: solid 1px red; */
+}
+.img-elon {
+  width: 300px;
+  height: auto;
+}
+
+.section-header {
+  font-size: 40px;
+  color: #474306;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+.section-summary-p {
+  width: 70%;
+}
+
+.about,
+.work,
+.contact {
+  margin: 50px 0;
+}
+/* styling the main header ################################################# */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name strong {
+  display: block;
+}
+
+.header-ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.ul-links {
+  /* normally would do something like'a:link' but im not sure if there will be an href*/
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #03045e;
+}
+.ul-links:visited {
+  color: #03045e;
+}
+
+/* intro section ###################################################### */
+.intro-section {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.hey-im-jakob {
+  font-weight: 600;
+  line-height: 1.2;
+}
+.beginner {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.img-intro {
+  border-radius: 52% 38% 56% 45% / 52% 32% 67% 42%;
+}
+.resume {
+  display: inline-block;
+  text-decoration: none;
+  border: solid 1px #474306;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #03045e;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+.resume:visited,
+.resume:hover,
+.resume:active {
+  color: #03045e;
+}
+.resume::before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  background-color: #f5ee84;
+  border-radius: 5px;
+  opacity: 0.7;
+  height: 41px;
+  width: 82px;
+  left: 3px;
+  z-index: -1;
+}
+
+/* the random art/symbols that i absolutely positioned */
+.image-border {
+  /* *******i tried doing this with a pseud class .img-intro::after 
+  but for some reason it wasnt displaying. also looks weird with 
+  the background color of the image but its for the purpose of learning 
+  and not the asthetic i guess ***** */
+  /* after using a pseud class on the resume link i think i just realized its because
+  i didnt have any specified width or height ahahahahaha */
+  position: absolute;
+  height: 187px;
+  width: 300px;
+  background-color: transparent;
+  right: 2px;
+  top: 35px;
+  border: solid 2px #474306;
+  border-radius: 43% 49% 56% 42% / 65% 35% 67% 35%;
+}
+.forward-slashes {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  top: 150px;
+  right: 250px;
+  color: #474306;
+}
+
+.plus-sign1 {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  top: 0px;
+  right: 30px;
+  color: #474306;
+}
+
+.plus-sign2 {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  top: -20px;
+  right: 30px;
+  color: #474306;
+}
+.plus-sign3 {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  top: -10px;
+  right: 46px;
+  color: #474306;
+}
+
+/* about section ########################################### */
+
+.about-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  right: 30px;
+  gap: 30px;
+}
+.about-ul li {
+  width: 500px;
+}
+
+.date {
+  display: block;
+  margin-bottom: 7px;
+}
+/* ############################# work section*/
+
+.section-header + p {
+  margin-bottom: 50px;
+}
+.case-study-container {
+  display: flex;
+  justify-content: space-between;
+}
+.case-study-item {
+  width: 350px;
+}
+.case-study-item img {
+  width: 350px;
+  height: auto;
+}
+figcaption {
+  font-size: 14px;
+}
+.case-study-title {
+  display: block;
+}
+
+.case-study p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/*  contact section######################## */
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.contact-content .img-elon {
+  height: 200px;
+  width: auto;
+}
+.contact-info {
+  display: block;
+  margin-top: 10px;
+  line-height: 1.4;
+}
